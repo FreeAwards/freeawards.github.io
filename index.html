@@ -1,0 +1,457 @@
+
+<!doctype html>
+<html>
+   <head>
+    <title>Bloxawards.com - Earn Robux by doing simple tasks!</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Earn Robux by completing quizzes, downloading games on your mobile device and watching videos!">
+    <meta name="author" content="Baheeg">
+  
+    <meta property="og:title" content="Bloxawards.com - Earn Robux by doing simple tasks!">
+    <meta property="og:description" content="Earn Robux by completing quizzes, downloading games on your mobile device and watching videos!">
+    <meta property="og:image" content="https://bloxawards.com/new-logo-sm.png">
+    <meta property="og:url" content="https://bloxawards.com.com">
+
+    <meta name="csrf-token" content="sfH0VCTNRdGGXfn09wsyOixI9MPnapL8zXp8Fh7O">
+    <!-- Favicon icon -->
+    <link rel="icon" type="image/png" sizes="16x16" href="/img/new-logo-sm.png">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <link rel="stylesheet" href="/css/toastify.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <link rel="stylesheet" href="/css/custom.css?cb=28">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-default/default.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:400,600|Open+Sans:400,600,700" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"></script>
+        <script src="/js/jquery.js"></script>
+</head>   <body>
+      <section id="content" class="content mt-0 
+            mb-5
+      ">
+        <!-- Header -->
+         <nav class="main-navbar navbar navbar-expand-lg m-auto p-0 w-100">
+   <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+      <section class="d-none">
+         <span class="navbar-toggler-icon" style="color: white">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" role="img" focusable="false">
+               <title>Menu</title>
+               <path stroke="currentColor" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2" d="M4 7h22M4 15h22M4 23h22"></path>
+            </svg>
+         </span>
+      </section>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+   </button>
+   <a class="navbar-brand d-block pr-3 pl-3 m-auto" href="https://bloxawards.com">
+      <img src="/img/logo.png" style="height: 36px;">
+   </a>
+   <div class="navbar-collapse collapse" id="navbarNav">
+      <hr class="d-xs-block d-lg-none mt-0 mb-0 d-none" style="border-top-width: 1px; border-top: 1px solid rgba(0, 0, 0, 0.2);">
+      <ul class="navbar-nav navbar-mobile-padding ml-auto">
+         <li class="nav-item d-md-block d-lg-none">
+            <a class="nav-link" id="mobile_nav_register" href="#" data-toggle="modal" data-target="#register-modal">
+               <p class="mb-0"><span class="fas fa-user-plus mr-2" aria-hidden="true"></span> Register</p>
+            </a>
+         </li>
+         <li class="nav-item d-md-block d-lg-none">
+            <a class="nav-link" id="mobile_nav_login" href="#" data-toggle="modal" data-target="#login-modal">
+               <p class="mb-0"><span class="fas fa-sign-in-alt mr-2" aria-hidden="true"></span> Login</p>
+            </a>
+         </li>
+         <li class="nav-item d-none d-lg-inline-block mr-0">
+            <a class="nav-link" href="#" data-toggle="modal" data-target="#register-modal">
+               <div class="btn signup-btn btn-success"><span class="fas fa-user-plus mr-2"></span>REGISTER</div>
+            </a>
+         </li>
+         <li class="nav-item d-none d-lg-inline-block">
+            <a class="nav-link" data-toggle="modal" data-target="#login-modal">
+               <div class="btn login-btn btn-light"><span class="fas fa-sign-in-alt mr-2"></span>LOGIN</div>
+            </a>
+         </li>
+      </ul>
+   </div>
+</nav>
+<div class="modal fade" id="login-modal">
+   <div class="modal-dialog">
+      <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header" style="padding: 0.9rem 0.9rem;">
+               <h4 class="modal-title" style="font-weight: 400">Login</h4>
+               <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <!-- Modal body -->
+            <div class="modal-body py-2 mb-2">
+               <div class="row mt-3">
+                <div class="col-12">
+                  <button type="submit" class="btn btn-block text-light btn-danger" data-toggle="modal" data-target="#roblox-auth-modal" onclick="$('#login-modal').modal('hide');"><span class="float-left" style="padding: 5px"> <img style="height: 28px;" src="/img/roblox-icon.png"></span><span style="display: flex;justify-content: center;align-items: center;margin-top: 5px;font-size:18px">Sign in with ROBLOX Username</span></button>
+               </div>
+               <div class="col-12" style="margin-top: 1rem">
+                  <button type="submit" class="btn btn-block text-light auth-google-btn" onclick="location.href='/auth/google'"><span class="float-left" style="background-color: white;padding: 5px"><img style="height: 28px;" src="/img/google-icon.png"></span><span style="display: flex;justify-content: center;align-items: center;margin-top: 5px;font-size:18px">Sign in with Google</span></button>
+               </div>
+               <div class="col-12 d-none" style="margin-top: 1rem">
+                  <button type="submit" class="btn btn-block text-light auth-discord-btn" onclick="location.href='/login/discord'"><span class="float-left" style="background-color: white;padding: 5px"><img style="height: 28px;" src="/img/discord-icon.svg"></span><span style="display: flex;justify-content: center;align-items: center;margin-top: 5px;font-size:18px">Sign in with Discord</span></button>
+               </div>
+               </div>
+               <h5 class="centered-line-words font-weight-normal" style="color: black; margin-top: 2rem; margin-bottom: 2rem; font-size: 20px;"><span style="background-color: #eef5f9;">or</span></h5>
+               <p style="margin-bottom: 0.5rem"><small></small></p>
+               <p>
+               <input autocomplete="off" type="email" id="email_login_email" name="email_login_email" class="form-control" placeholder="Email address">
+               </p>
+               <p>
+               <input autocomplete="off" type="password" id="email_login_password" name="email_login_password" class="form-control" placeholder="Password">
+               </p>
+               <div class="row mb-2">
+               <div class="col-12 col-md-6" style="margin-top:12.5px;">
+                  <button id="emailLoginBtn" type="submit" class="btn btn-primary-bright text-light btn-block fw-500" style="font-size:22px;min-height:40px"><span class="fas fa-sign-in-alt mr-2" aria-hidden="true"></span>Login</button>
+               </div>
+               <div class="col-12 col-md-6" style="margin-top:12.5px;">
+                  <button type="submit" class="btn btn-secondary text-light btn-block fw-500" style="font-size:22px;min-height:40px" data-toggle="modal" data-target="#register-modal" onclick="$('#login-modal').modal('hide');"><span class="fas fa-user-plus mr-2" aria-hidden="true"></span>Register</button>
+               </div>
+               <div class="col-12 mx-auto mt-4 text-center">
+                  <a class="text-primary" style="font-size:18px" href="/password/reset">Forgot your Password?</a>
+               </div>
+               </div>
+               <!-- <hr> -->
+            </div>
+      </div>
+   </div>
+   </div>
+   <div class="modal fade" id="register-modal">
+   <div class="modal-dialog">
+      <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header" style="padding: 0.9rem 0.9rem;">
+               <h4 class="modal-title" style="font-weight: 400">Register</h4>
+               <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <!-- Modal body -->
+            <div class="modal-body py-2 mb-2" style="background-color: #eef5f9;">
+               <div class="row mt-3">
+                <div class="col-12">
+                  <button type="submit" class="btn btn-block text-light btn-danger" data-toggle="modal" data-target="#roblox-auth-modal" onclick="$('#register-modal').modal('hide');"><span class="float-left" style="padding: 5px"> <img style="height: 28px;" src="/img/roblox-icon.png"></span><span style="display: flex;justify-content: center;align-items: center;margin-top: 5px;font-size:18px">Enter with Username</span></button>
+               </div>
+               <div class="col-12" style="margin-top: 1rem">
+                  <button type="submit" class="btn btn-block text-light auth-google-btn" onclick="location.href='/auth/google'"><span class="float-left" style="background-color: white;padding: 5px"><img style="height: 28px;" src="/img/google-icon.png"></span><span style="display: flex;justify-content: center;align-items: center;margin-top: 5px;font-size:18px">Sign up with Google</span></button>
+               </div>
+               <div class="col-12 d-none" style="margin-top: 1rem">
+                  <button type="submit" class="btn btn-block text-light auth-discord-btn" onclick="location.href='/login/discord'"><span class="float-left" style="background-color: white;padding: 5px"><img style="height: 28px;" src="/img/discord-icon.svg"></span><span style="display: flex;justify-content: center;align-items: center;margin-top: 5px;font-size:18px">Sign up with Discord</span></button>
+               </div>
+               </div>
+               <h5 class="centered-line-words font-weight-normal" style="color: black; margin-top: 2rem; margin-bottom: 1rem; font-size: 20px;"><span style="background-color: #eef5f9;">or</span></h5>
+               <!-- <p>
+                 <input autocomplete="off" type="username" id="email_register_name" name="email_register_name" class="form-control" placeholder="Nickname">
+               </p>
+               <p>
+               <input autocomplete="off" type="email" id="email_register_email" name="email_register_email" class="form-control" placeholder="Email address">
+               </p>
+               <p>
+               <input autocomplete="off" type="password" id="email_register_password" name="email_register_password" class="form-control" placeholder="Password">
+               </p>
+               <p>
+               <input autocomplete="off" type="password" id="email_register_password_confirmation" name="email_register_password_confirmation" class="form-control" placeholder="Confirm Password">
+               </p> -->
+               <div class="row mb-2">
+               <!-- <div class="col-12 col-md-6" style="margin-top:12.5px;">
+                  <button id="emailRegisterBtn" type="submit" class="btn btn-primary-bright text-light btn-block fw-500" style="font-size:22px;min-height:40px"><span class="fas fa-user-plus mr-2" aria-hidden="true"></span>Register</button>
+               </div> -->
+               <div class="col-12 text-center" style="margin-top:12.5px;">
+                  <p style="font-size: 20px; outline: none !important; color: #0868d0; cursor: pointer" role="button" tabindex="0" data-toggle="modal" data-target="#login-modal" onclick="$('#register-modal').modal('hide');">Have an account? Click here to login!</p>
+               </div>
+               </div>
+               <!-- <hr> -->
+            </div>
+      </div>
+   </div>
+</div>
+   <div class="modal fade" id="roblox-auth-modal">
+   <div class="modal-dialog">
+      <div class="modal-content">
+            <!-- Modal Header -->
+            <div class="modal-header">
+               <h4 class="modal-title" style="font-weight: 400">Enter with ROBLOX</h4>
+               <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+            <!-- Modal body -->
+            <div class="modal-body py-2 mb-2 mt-3" style="background-color: #eef5f9;">
+               <div id="roblox_password_message" class="banner alert bg-secondary border-0 fade show mb-3" role="alert" style="display:none;">
+                  <p class="mb-0">This account is verified, please type your Bloxawards password. <a href="/password/reset" class="font-weight-bold" style="color: white; text-decoration:underline;">Forgot your password?</a></p>
+              </div>
+              <p class="text-center w-100 mb-0">
+                <img style="display:none" id="roblox_form_avatar" class="avatar-circle mb-3" src="https://www.roblox.com/headshot-thumbnail/image?userId=1&width=420&height=420&format=png">
+              </p>
+               <p class="mb-1">
+                  <input autocomplete="off" type="text" id="roblox_username" name="roblox_username" class="form-control" placeholder="ROBLOX Username">
+               </p>
+               <p class="text-danger" id="invalid_roblox_username_message" style="display:none;font-size: 16px;font-weight: 500;">This ROBLOX username does not exist!</p>
+               <p>
+                    <input autocomplete="off" type="password" id="roblox_password" name="roblox_password" class="form-control mt-2" placeholder="Password" style="display:none">
+               </p>
+                <p class="text-danger" id="invalid_password_message" style="display:none;font-size: 16px;font-weight: 500;">Invalid password!</p>
+
+               <div class="row mb-2">
+               <div class="col-12 col-md-6" style="margin-top:12.5px;">
+                  <button id="enterWithRobloxBtn" type="submit" class="btn btn-primary-bright text-light btn-block fw-500" style="font-size:22px;min-height:40px"><span class="fas fa-user-plus mr-2" aria-hidden="true"></span>Enter</button>
+               </div>
+               <div class="col-12 col-md-6" style="margin-top:12.5px;">
+                  <button type="submit" class="btn btn-secondary text-light btn-block fw-500" style="font-size:22px;min-height:40px" data-toggle="modal" data-target="#login-modal" onclick="$('#roblox-auth-modal').modal('hide');"><span class="fas fa-sign-in-alt mr-2" aria-hidden="true"></span>Back</button>
+               </div>
+               </div>
+               <!-- <hr> -->
+            </div>
+      </div>
+   </div>
+</div>
+
+         <!-- Banner -->
+        
+         <style>
+          .new-years-promotional {
+            background-color: green;
+            border: unset !important;
+            box-shadow: 0 2px 4px rgb(0 0 0 / 12%) !important;
+            margin-bottom: 0rem !important;
+            padding:10px;
+            border-radius: unset !important; 
+            text-align:center;
+            width: 100%;
+            display: block; 
+            position: relative;
+          }
+
+
+        </style>
+
+        <div class="card new-years-promotional" style="display: none">
+          <h3 style="color: white">💰 50% R$ BONUS 💰</h3>
+          <h5 style="color: white">Earn <strong>50%</strong> more Robux by completing offers in the next: <strong class="newYearsRushTimer"></strong></h5>
+        </div>
+        <!-- Page content -->
+         
+<div class="p-3 pt-0 text-center text-light landing-hero">
+   <h1 class="display-4 font-weight-bold text-uppercase">Free <span class="text-success-hero">R$</span> from... <span id="earning-method"></span></h1>
+   <div class="btn btn-xlg btn-success shadow" style="font-weight: 700" data-toggle="modal" data-target="#register-modal"><span class="fas fa-user-plus mr-3" aria-hidden="true"></span>START NOW</div>
+</div>
+<div class="row px-md-5 landing-steps" style="margin: unset !important;background-image: url('https://i.imgur.com/ae6Sd9U.png');
+    background-repeat: repeat;
+    background-position-y: center;
+    background-position-x: center;
+    background-size: 850px;
+   ">
+    <style>
+          @media  screen and (min-width: 768px) {
+            .landing-steps {
+              background-position-y: bottom !important;
+              background-repeat: repeat-x !important;
+            }
+          }
+    </style>
+          <div class="col-12 col-md-4 text-dark text-center pt-4">
+                <div class="d-flex h-100" style="flex-direction: column;">
+                    <h2 class="display-5">Create Account</h2>
+                    <p class="mb-5" style="font-size: 1.2rem">Sign up with your ROBLOX username or Google Account</p>
+                    <img class="img-fluid shadow mx-auto mt-auto w-100" src="https://i.imgur.com/v2fGoNd.png" style="max-width: 349px !important; border-top-right-radius: 21px; border-top-left-radius: 21px">
+                </div>
+          </div>
+          <div class="col-12 col-md-4 text-lightn text-center pt-4">
+                <div class="d-flex h-100" style="flex-direction: column;">
+                    <h2 class="display-5">Complete Tasks</h2>
+                    <p class="mb-5" style="font-size: 1.2rem">Complete tasks for Robux</p>
+                    <img class="img-fluid shadow mx-auto mt-auto w-100" src="https://i.imgur.com/ayLEbYu.png" style="max-width: 354px !important; border-top-right-radius: 21px; border-top-left-radius: 21px">
+                </div>
+          </div>
+          <div class="col-12 col-md-4 text-dark text-center pt-4">
+            <div class="d-flex h-100" style="flex-direction: column;">
+                <h2 class="display-5">Withdraw Robux</h2>
+                <p class="mb-5" style="font-size: 1.2rem">Transfer your Robux to your ROBLOX account</p>
+                <img class="img-fluid shadow mx-auto mt-auto w-100" src="https://i.imgur.com/UF7x38h.png" style="max-width: 354px !important; border-top-right-radius: 21px; border-top-left-radius: 21px">
+            </div>
+          </div>
+        </div>
+<div class="container landing-second d-none">
+   <h4 class="text-uppercase text-center mt-4" style="color: rgb(33, 37, 41);">💰 Earn R$ by doing fun tasks 💰</h4>
+   <hr>
+   <div class="row">
+      <div class="col-12 col-md-6 col-lg-3 text-center text-light p-3">
+         <div class="landing-method landing-method-games">
+            <span class="fas fa-gamepad" style="font-size: 4rem;"></span>
+            <h2>Games</h2>
+         </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3 text-center text-light p-3">
+         <div class="landing-method landing-method-videos">
+            <span class="fas fa-video" style="font-size: 4rem;"></span>
+            <h2>Videos</h2>
+         </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3 text-center text-light p-3">
+         <div class="landing-method landing-method-surveys">
+            <span class="fas fa-poll-h" style="font-size: 4rem;"></span>
+            <h2>Surveys</h2>
+         </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-3 text-center text-light p-3">
+         <div class="landing-method landing-method-contests">
+            <span class="fas fa-trophy" style="font-size: 4rem;"></span>
+            <h2>Contests</h2>
+         </div>
+      </div>
+   </div>
+</div>
+<script>
+   window.addEventListener('load', function() {
+       const instance = new TypeIt('#earning-method', {
+           strings: ['doing quizzes', 'watching videos', 'playing games', 'winning contests'],
+           speed: 100,
+           loopDelay: [500, 4000],
+           nextStringDelay: [4000, 500],
+           loop: true,
+           breakLines: false,
+           waitUntilVisible: true,
+       }).go();
+   });
+</script>
+ 
+        </section>
+
+      <!-- Footer -->
+      <footer class="page-footer font-small text-light" style="background-color: #0a5cb5">
+            <div class="footer-container container">
+                <div class="row">
+                    <div class="col-6 col-md-4 mb-2">
+                        <h3>About us</h3>
+                        <ul>
+                            <li><a href="/help/getting-started" class="text-light">About Us</a></li>
+                            <li><a href="/terms-of-service" class="text-light">Terms of Service</a></li>
+                            <li><a href="/terms-of-service#privacypolicy" class="text-light">Privacy Policy</a></li>
+                            <li><a href="/contact-us" class="text-light">Business Contact</a></li>
+                            
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md-4 mb-2">
+                        <h3>Support</h3>
+                        <ul>
+                            <li><a href="/contact-us" class="text-light">Contact Us</a></li>
+                            <li><a href="/help" class="text-light">Help Centre</a></li>                            
+                            <li><a href="/help/referrals-and-sponsorships" class="text-light">Sponsorships</a></li>
+                            <li><a href="/help/missing-points" class="text-light">Where is my R$?</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-6 col-md-4 mb-2">
+                        <h3>Socials</h3>
+                        <ul>
+                            <li><a href="https://discord.gg/TrSZjcs" class="text-light"><i class="fab fa-discord" aria-hidden="true"></i>Discord</a></li>
+                            <li><a href="https://www.youtube.com/channel/UC8vte6A2PF_4DQ0A1BWroKg" class="text-light"><i class="fab fa-youtube" aria-hidden="true"></i>Youtube</a></li>
+                            <li><a href="https://twitter.com/blox_awards" class="text-light"><i class="fab fa-twitter" aria-hidden="true"></i>Twitter</a></li>
+                            <li><a href="https://instagram.com/bloxawards" class="text-light"><i class="fab fa-instagram" aria-hidden="true"></i>Instagram</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12">
+                        <h6 class="text-center">© 2021 | Bloxawards</h6>
+                        <h6 class="text-center">We are not affiliated with ROBLOX Corporation.</h6>
+                    </div>
+                </div>
+            </div>
+        </footer>
+      <!-- Mobile nav -->
+      <!-- <style>
+.group-container{
+    padding:0;
+    height:100%;
+}
+
+.selectors, .block{
+    height:100%;
+    width:100%;
+}
+
+.selectors button{
+    border: 0;
+    border-radius: 0;
+    width:50%;
+    margin-left: 0;
+}
+
+.selectors button:active{
+    border:0;
+}
+
+.selectors button:focus{
+    border:0;
+    outline: 0;
+    box-shadow: 0 0 0 0px;
+}
+
+.active, .selector-holder{
+    display: flex;
+    flex-direction: column;
+}
+
+.inactive{
+    display: none;
+}
+
+.selector-holder span{
+    font-size: 0.8rem;
+}
+
+/* Colors of the buttons*/
+.button-active, .selectors button:hover, .selectors button:active, .selectors button:focus{
+    color: #ff0000;
+}
+
+.button-inactive{
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+}
+</style>
+<footer class="d-sm-block d-md-none" style="position: fixed;bottom: 0;width: 100%;height: 60px;background-color: #f5f5f5;box-shadow: 0 1px 5px rgb(0 0 0 / 20%);z-index: 99999">
+   <div id="buttonGroup" class="btn-group selectors" role="group" aria-label="Basic example">
+      <button data-toggle="modal" data-target="#login-modal" id="account" type="button" class="btn btn-primary">
+         <div class="selector-holder">
+            <i class="material-icons">login</i>
+            <span>Login</span>
+         </div>
+      </button>
+      <button data-toggle="modal" data-target="#register-modal" id="account" type="button" class="btn btn-success">
+         <div class="selector-holder">
+            <i class="material-icons">person_add</i>
+            <span>Register</span>
+         </div>
+      </button>
+   </div>
+</footer> -->
+
+      <!-- Core JS dependencies -->
+      <script src="/js/popper.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script src="/js/toastify.min.js"></script>
+<script src="/js/promise.js"></script>
+<script src="/js/custom.js?cb=14"></script>
+<script src="/js/login.js?cb=2"></script>
+<script src="/js/preferences.js?cb=3"></script>
+<script src="/js/swal2.js"></script>
+<script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
+<script src="/js/shepherd.js"></script>
+<!-- Christmas Rush -->
+<script src="/js/countdown.js"></script>
+<script type="text/javascript">
+  var timeToEnd = 1615762800000;
+  setInterval(function(){
+    var currentDate = new Date();
+    if (timeToEnd > currentDate.getTime()) {
+      $('.newYearsRushTimer').html(countdown(new Date(timeToEnd), new Date(), countdown.HOURS | countdown.MINUTES | countdown.SECONDS, 1).toString());
+    } else {
+      $('.new-years-promotional').fadeOut(200);
+    }
+  }, 1000);
+</script>
+
+      <!-- Page Specific JS dependencies -->
+                      <script src="/js/typeit.min.js"></script>
+           </body>
+</html>
